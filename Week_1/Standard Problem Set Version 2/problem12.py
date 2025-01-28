@@ -51,6 +51,13 @@ Example Output:
 
 # Implement the solution:
 
+
+# Understand the problem:
+
+# Plan a solution step-by-step:
+
+# Implement the solution:
+
 def shuffle(cards):
 	result = []
 	midpoint = len(cards) // 2
