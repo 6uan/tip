@@ -42,7 +42,6 @@ def lineup(artists, set_times):
     results = {}
 
     for i in range(len(artists)):
-        # map each artist to their respective set time
         results[artists[i]] = set_times[i]
     
     return results
