@@ -35,6 +35,12 @@ Example Output:
 ['Golden Hour', 'Sunset Serenade', 'Ocean Waves']
 ['Crypto Kitty', 'Galactic Voyage']
 '''
+
+# The time for this solution would be O(n) as we need to copy the list into our deque
+# We also need to iterate n times until our queue is empty
+# Appending to our result variable is O(1)
+# And our space is O(n) since our result grows based on the nft_queue input
+
 from collections import deque
 
 def process_nft_queue(nft_queue):

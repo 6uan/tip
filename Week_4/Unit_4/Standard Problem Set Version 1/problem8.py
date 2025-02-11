@@ -33,6 +33,14 @@ Example Output:
 # we can set equal value that is None and also append value if it is ==
 # store result as a tuple
 
+
+# For this solution we have O(n) time and O(1) space
+# We will iterate through our values n times
+# We perform conditional checks on the values
+# For our space we are storing a fixed amount of variables
+# closest_under, closest_over, and equal_value which will
+# be reassigned during the for loop
+
 def find_closest_nft_values(nft_values, budget):
     closest_under = float('-inf')
     closest_over = float('inf')

@@ -28,10 +28,13 @@ True
 False
 '''
 
+# For this solution our time would be O(n) and space would be O(n)
+# Our stack will grow based on actions
+# We will loop n times through the actions
+# And for each action we will perform an O(1) operation on it
 
 def validate_nft_actions(actions):
     stack = []
-
 
     for action in actions:
         if action == "add":

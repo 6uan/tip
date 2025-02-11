@@ -38,12 +38,11 @@ Example Output:
 []
 '''
 
+# Create set because every unique creator can be stored once at most and checking if it exist is O(1)
+# Store results in list because we can append to it in O(1) time
 # For my solution I have time: O(n) and space O(n)
 # Appending to my list will be O(1) and iterating through nft_collections will be O(n)
 # For space, my list will grow 'n' creators if they have more than one NFT in the collection
-# I use a set because every unique creator can be stored once at most. If it is in the set
-# it means it has seen it before
-# I use a list to store my results because we can append to it in O(1) time
 
 def identify_popular_creators(nft_collection):
     seen = set()

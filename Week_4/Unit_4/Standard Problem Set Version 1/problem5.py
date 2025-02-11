@@ -55,13 +55,18 @@ Example Output:
 []
 '''
 
+# My solution is time O(n) and space O(n)
+# Although we have a nested for loop we are checking n(nft) * t(tags) only
+# We check using if tag in set([tags]) to make the check O(1)
+# We store our results in a list which grows depending on how many tags match our parameter
+
 def search_nft_by_tag(nft_collections, tag):
 
     results = []
     
     for list in nft_collections:
         for nft in list:
-            if tag in nft["tags"]:
+            if tag in set(nft["tags"]):
                 results.append(nft["name"])
 
     return results
