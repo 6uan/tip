@@ -80,6 +80,14 @@ def print_linked_list(head):
         print(current.value, end=" -> " if current.next else "\n")
         current = current.next
 
+# Solution has O(n) time complexity because we are traversing the linked list once to check if there is a local minima or maxima in the song_audio
+# Solution has O(1) space complexity because we are using three pointers to check if there is a local minima or maxima in the song_audio that don't require extra space
+# We are using three pointers to check if there is a local minima or maxima in the song_audio 
+# We are using a counter to store the number of critical points in the song_audio
+# prev, current, next 
+#  1      2       3
+# This way we always know the nodes we are comparing
+
 def count_critical_points(song_audio):
     if not song_audio.next:
         return 0

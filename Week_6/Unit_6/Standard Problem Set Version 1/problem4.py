@@ -57,6 +57,9 @@ class SongNode:
 		self.artist = artist
 		self.next = next
 
+# Solution has O(n) time complexity because we are traversing the linked list once to check if there is a cycle in the playlist
+# Solution has O(1) space complexity because we are using two pointers to check if there is a cycle in the playlist that don't require extra space
+
 def on_repeat(playlist_head):
 	slow, fast = playlist_head, playlist_head
 	

@@ -55,11 +55,16 @@ class SongNode:
 		self.next = next
 
 
+# Solution has O(n) time complexity because we are traversing the linked list once to get the frequency of each artist in the playlist
+# Solution has O(set(current.artist)) space complexity because we are storing the frequency of each artist in the playlist in a dictionary
+# We are using a dictionary to store the frequency of each artist
+
+
 def get_artist_frequency(playlist):
 	
     freq_dict = {} # O(n) || O(set(current.artist))
     
-    current = playlist # 1
+    current = playlist # O(1)
     
     while current: # O(n)
 
@@ -67,17 +72,16 @@ def get_artist_frequency(playlist):
         freq_dict[current.artist] = 1 + freq_dict.get(current.artist, 0)
         """
 		
-        if current.artist in freq_dict: # 1
-            freq_dict[current.artist] += 1 # 1
+        if current.artist in freq_dict: # O(1)
+            freq_dict[current.artist] += 1 # O(1)
         else:
-            freq_dict[current.artist] = 1 # 1
+            freq_dict[current.artist] = 1 # O(1)
 			
-        current = current.next # 1
+        current = current.next # O(1)
 
-    return freq_dict # 1
+    return freq_dict
 
 playlist = SongNode("Saturn", "SZA", SongNode("Who", "Jimin", SongNode("Espresso", "Sabrina Carpenter", SongNode("Snooze", "SZA"))))
 
-# Saturn:SZA -> Who:Jimin -> Espresson:Sabrina Carpenter -> Snooze:SZA
 
 print(get_artist_frequency(playlist)) # { "SZA": 2, "Jimin" : 1, "Sabrina Carpenter": 1}

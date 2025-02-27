@@ -72,6 +72,10 @@ def print_linked_list(node):
         current = current.next
     print()
 
+
+# Solution has O(n) time complexity because we are traversing the linked list once to check if there is a cycle in the playlist
+# Solution has O(1) space complexity because we are using two pointers to check if there is a cycle in the playlist that don't require extra space
+
 def loop_length(playlist_head):
 	
     fast, slow = playlist_head, playlist_head

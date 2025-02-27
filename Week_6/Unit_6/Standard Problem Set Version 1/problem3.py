@@ -60,6 +60,13 @@ Expected Output:
 
 """
 
+#                        current.next: Dreams -> current.next = Lovely Day
+#                        current: Simple Twist  -> current = Lovely Day
+#                           |
+# ('SOS', 'ABBA') -> ('Simple Twist of Fate', 'Bob Dylan') -> ('Dreams', 'Fleetwood Mac') -> ('Lovely Day', 'Bill Withers')
+#                           |
+#                         current.next(Dreams) = current.next.next(Lovely Day)
+#                           ---------------------------------------------------------------> ('Lovely Day', 'Bill Withers')
 
 class SongNode:
      
@@ -76,15 +83,10 @@ def print_linked_list(node):
         current = current.next
     print()
 
-#                        current.next: Dreams -> current.next = Lovely Day
-#                        current: Simple Twist  -> current = Lovely Day
-#                           |
-# ('SOS', 'ABBA') -> ('Simple Twist of Fate', 'Bob Dylan') -> ('Dreams', 'Fleetwood Mac') -> ('Lovely Day', 'Bill Withers')
-#                           |
-#                         current.next(Dreams) = current.next.next(Lovely Day)
-#                           ---------------------------------------------------------------> ('Lovely Day', 'Bill Withers')
 
-# Function with a bug!
+# Solution has O(n) time complexity because we are traversing the linked list once to remove the song from the playlist
+# Solution has O(1) space complexity because we are not using any extra space that grows with the input size
+
 def remove_song(playlist_head, song):
     if not playlist_head:
         return None
