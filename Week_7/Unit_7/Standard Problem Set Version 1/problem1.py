@@ -27,6 +27,11 @@ Example Output:
 
 # Implement
 
+# These 2 solutions perform similar operations but take a very different approach in the iterative function we start
+# from the "bottom up" and iterate until we reach the end to return the counter, however in the recursive solution
+# we start from the end and break the problem into smaller and smaller subproblems until we hit our base case; only
+# then will we construct our return by going through and returning all the values until we hit the first recursive call
+
 def count_suits_iterative(suits):
     counter = 0
 

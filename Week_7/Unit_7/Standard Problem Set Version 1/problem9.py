@@ -38,3 +38,6 @@ def merge_missions_iterative(mission1, mission2):
     return temp.next  # Return the head of the merged linked list
 '''
 
+# The solution I prefer is the recursive solution because it is more readable and easier to understand,
+# the iterative solution is more complex to understand as we have to create a temp node and a tail node to keep track of the nodes
+# the recursive solution is more elegant and easier to understand as we are simply comparing the values and recursively calling the function 

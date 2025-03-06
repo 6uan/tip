@@ -29,6 +29,10 @@ Example Output:
 
 # Implement:
 
+# The iterative solution is time complexity O(n) because we are iterating through the list and checking if the suit is in the set
+# the recursive solution is also O(n) because we are iterating through the list and removing the unique suit and calling the function again
+# the space complexity is O(n) for both solutions because we are using a set to store the unique suits
+
 def count_suits_iterative(suits):
     seen = set()
     counter = 0

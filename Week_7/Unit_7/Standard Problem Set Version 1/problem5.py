@@ -29,6 +29,9 @@ Example 2 Explanation: -2 to the 4th power is 1/(4 * 4) is 0.0625.
 
 # Implement:
 
+# The time complexity of this solution is O(n) because we are making n recursive calls to calculate the power of 4
+# the space complexity is O(n) because we are storing the recursive calls in the call stack
+
 
 def power_of_four(n):
     if n == 0:

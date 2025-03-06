@@ -23,6 +23,12 @@ Example 2 Explanation: The maximum strength among the Avengers is 90.
 
 # Plan: we must keep track of the highest one we've seen
 
+# The time complexity of this solution is O(n) because we are making n recursive calls to find the highest strength
+# the space complexity is O(n) because we are storing the recursive calls in the call stack
+# We use a helper function to keep track of the max_strength and then return it at the end
+# In the helper function we set our 0th index as the current_strength and then compare it to the max strength
+# if it is greater we update the max_strength and then call the function again with the rest of the list
+# if the list is empty we return the max_strength
 
 def strongest_avenger(strengths):
     

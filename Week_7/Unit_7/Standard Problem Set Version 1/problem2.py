@@ -22,6 +22,9 @@ Example Output:
 
 # Plan: We can take the approach of finding length but instead of counting we add the first ith value
 
+# This solution is O(n) because we are using the slice operation to access the rest of the list while updating 
+# the sum in stones[0], therefore we must traverse the entire list to get the sum of all the stones and we are
+# using O(n) space because of the recursive calls and the slice operation creating a new list each time
 
 def sum_stones(stones):
 

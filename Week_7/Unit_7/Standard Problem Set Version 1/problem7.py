@@ -20,6 +20,9 @@ Example 2 Explanation: There are two characters "V" in the string "VXVYGA",
 therefore there are two vibranium deposits in the string.
 '''
 
+# This solution is O(n) because we are iterating through the string and checking if the character is a vibranium deposit or 'V'
+# the space complexity is O(n) because we are using the slice operation to create a new list each time
+# and storing the recursive calls in the call stack through an if else statement
 
 def count_deposits(resources):
     if not resources:

@@ -20,6 +20,11 @@ Example Output:
 21
 '''
 
+# The solutions I have provided provide a "naive" solution and then an optimized solution using memoization
+# the naive solution is O(2^n) because we are making 2 recursive calls for each n, and the optimized solution is O(n)
+# The space complexity of the naive solution is O(n) because we are making n recursive calls and the optimized solution is O(1)
+# because we are storing the values in a dictionary and not creating a new list each time
+
 # def fibonacci_growth(n):
 #     if n <= 0:
 #         return 0
