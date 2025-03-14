@@ -55,6 +55,6 @@ def hulk_smash(n):
             
     return result
 
-# print(hulk_smash(3))
-# print(hulk_smash(5))
-# print(hulk_smash(15))
+print(hulk_smash(3))
+print(hulk_smash(5))
+print(hulk_smash(15))

@@ -59,19 +59,21 @@ Example Output:
 #                                                | 4 - 1 = 3 -> no more meals return 2
 
 def minimum_boxes(meals, capacity):
-    sorted_meals = sorted(meals)
-    sorted_capacity = sorted(capacity, reverse=True)
+    meal_sum = sum(meals)
     counter = 0
-    left1 = 0
-    left2 = 0
 
-    while sorted_meals: # [1,2,3]
-        if sorted_meals[left1] > sorted_capacity[left2]:
-            sorted_capacity[left2] - sorted_meals[left1]
-            sorted_meals.popleft()
-           
-    return counter 
+    for box in capacity:
+        if meal_sum > 0:
+            meal_sum -= box
+            counter += 1
+    
+    return counter
 
-meals = [1, 3, 2]
-capacity = [4, 3, 1, 5, 2]
-print(minimum_boxes(meals,capacity))
+
+meals1 = [1, 3, 2]
+capacity1 = [4, 3, 1, 5, 2]
+print(minimum_boxes(meals1,capacity1))
+
+meals2 = [5, 5, 5]
+capacity2 = [2, 4, 2, 7]
+print(minimum_boxes(meals2, capacity2))
