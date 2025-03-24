@@ -33,7 +33,7 @@ Example Output:
 12
 '''
 
-from collections import deque
+# The time complexity is O(1) because we are only evaluating three nodes in the tree: the root and its two children. The time complexity does not depend on the size of the tree, as it is always a fixed number of nodes. The function uses switch case to match the root operation and calculate the yield.
 
 class TreeNode:
     def __init__(self, value, left=None, right=None):
@@ -41,25 +41,6 @@ class TreeNode:
         self.left = left
         self.right = right
 
-# def calculate_yield(root):
-#     if not root:
-#         return None
-  
-#     queue = deque([root])
-
-#     while queue:
-#         current_node = queue.popleft()
-
-#         if current_node.val == '+':
-#             return current_node.left.val + current_node.right.val
-#         elif current_node.val == "-":
-#             return current_node.left.val - current_node.right.val
-#         elif current_node.val == "*":
-#             return current_node.left.val * current_node.right.val
-#         elif current_node.val == "/":
-#             return current_node.left.val / current_node.right.val
-#         else:
-#             return "Not a valid operation!"
 
 def calculate_yield(root):
     if isinstance(root.val, int):
@@ -68,16 +49,17 @@ def calculate_yield(root):
     left_node = calculate_yield(root.left)
     right_node = calculate_yield(root.right)
 
-    if root.val == '+':
-        return left_node + right_node
-    elif root.val == "-":
-        return left_node - right_node
-    elif root.val == "*":
-        return left_node * right_node
-    elif root.val == "/":
-        return left_node / right_node
-    else:
-        return "Not a valid operation!"  
+    match root.val:
+        case '+':
+            return left_node + right_node
+        case '-':
+            return left_node - right_node
+        case '*':
+            return left_node * right_node
+        case '/':
+            return left_node / right_node if right_node != 0 else "Divide by zero error!"
+        case _:
+            return "Not a valid operation!"
   
 
 

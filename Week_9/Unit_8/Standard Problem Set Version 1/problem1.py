@@ -58,5 +58,4 @@ root.left.right = TreeNode("Opal")
 root.right.left = TreeNode("Crab")
 root.right.right = TreeNode("Gala")
 
-# Using print_tree() included at the top of this page
 print_tree(root)
