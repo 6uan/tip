@@ -90,6 +90,7 @@ def build_tree(values):
 
   return root
 
+# This solution has a time complexity of O(n) because we are traversing each node in the tree once. We are using recursion to keep track of the depth of each node, and we are returning the maximum depth in a single pass. We recurse and keep count of the depth at each node, and we return the maximum depth between both sides. 
 
 def max_tiers(cake):
     if not cake:

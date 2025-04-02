@@ -86,6 +86,8 @@ def build_tree(values):
 
   return root
 
+# This solution is O(n) because at worst we will have to traverse each node in the tree once. We are using a recursive function to traverse the tree and check if the sum of the path equals the target. We store the current sum in an accumulator and check if it equals the target. If we reach a leaf node and the sum does not equal the target, we return False. 
+
 def can_fulfill_order(inventory, order_size, curr_sum=0):
 
     if curr_sum == order_size:

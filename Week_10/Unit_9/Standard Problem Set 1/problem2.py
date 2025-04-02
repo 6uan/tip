@@ -45,6 +45,8 @@ class Puff():
         self.left = left
         self.right = right
 
+# This solution is O(n) because we are traversing each node once and storing the values in a list. We are using a queue to keep track of the nodes at each level, and we are appending the values to the list in a single pass.
+
 def print_design(design):
     if not design:
         return None

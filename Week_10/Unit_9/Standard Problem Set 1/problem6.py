@@ -89,6 +89,8 @@ def build_tree(values):
 
   return root
 
+# The time complexity for this is O(n) due to having to traverse through each node in the tree. We are using breath first search to traverse the tree and we are using a queue to keep track of the nodes at each level. We are also using a for loop to iterate through each level and we are appending the values to a result list. We have a boolean to keep track of the zig-zag order. And reverse the order if needed. 
+
 def zigzag_icing_order(cupcakes):
     if not cupcakes: 
         return cupcakes

@@ -63,6 +63,7 @@ class TreeNode():
 
 from collections import deque
 
+
 def print_tree(root):
     if not root:
         return "Empty"
@@ -109,6 +110,8 @@ def build_tree(values):
       index += 1
 
   return root
+
+# This solution is O(min(n,m)) time complexity because we are only merging the trees where they overlap, and we will attach the rest of the tree where overlapping ends. We use breath first search and a tuple to keep track of the nodes at each level. We are returning order1 tree which will be the merged tree.
 
 def merge_orders(order1, order2):
      

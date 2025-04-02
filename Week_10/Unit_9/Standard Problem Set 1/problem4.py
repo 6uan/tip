@@ -131,6 +131,8 @@ def build_tree(values):
 
   return root
 
+# The time complexity of this solution is O(n) because we must traverse through each node in the tree atleast once. We are using a queue to keep track of the nodes at each level, and we are returning the length of the result list which will be how many levels we have.
+
 def max_tiers(cake):
     if not cake:
        return 0
@@ -153,8 +155,6 @@ def max_tiers(cake):
         
     return len(result)
     
-
-
 
 """
         Chocolate
